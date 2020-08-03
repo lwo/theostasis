@@ -1,0 +1,33 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.box {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+.green {
+  background-color: green;
+}
+.orange {
+  background-color: orange;
+}
+.grey {
+  background-color: gray;
+}
+.red {
+  background-color: red;
+}
+
+.priest {
+  width: 100px;
+  height: 100px;
+  background-color: purple;
+}

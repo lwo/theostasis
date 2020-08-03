@@ -1,0 +1,39 @@
+extends ../layout
+
+block content
+    h1= title
+    p Welcome to #{title}
+
+    div(id='demo_gsap')
+        img(class='logo' src='/images/logo.jpg' alt='Image of Benedictus')
+
+    div(id='demo_kute')
+        div.box.green#selector1
+        div.box.orange#selector2
+        div.box.grey#selector3
+        div.box.red#selector4
+        div.priest
+
+    script.
+        $(function() {
+            gsap.to('.logo', {
+                duration: 2,
+                x: 300,
+                backgroundColor: '#560563',
+                borderRadius: '20%',
+                border: '5px solid white',
+                ease: 'back'
+            });
+
+            let tween1 = KUTE.fromTo('#selector1', {rotate: 0}, {rotate: -720});
+            let tween2 = KUTE.fromTo('#selector2', {rotateX: 0}, {rotateX: 200});
+            let tween3 = KUTE.fromTo('#selector3', {rotateY: 0}, {rotateY: 180}, {perspective: 100});
+            let tween4 = KUTE.fromTo('#selector4', {rotateZ: 0}, {rotateZ: 360});
+
+            tween1.start();
+            tween2.start();
+            tween3.start();
+            tween4.start();
+
+            tween1.chain(tween2.chain(tween3));
+        })

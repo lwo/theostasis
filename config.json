@@ -1,0 +1,6 @@
+{
+  "git": "http://github.com/lwo/theosis",
+  "web": {
+    "port": 3000
+  }
+}
