@@ -6,10 +6,12 @@ block content
 
     div(id='canvas' class='canvas')
 
-    svg
-        circle(id="grace" cx="200" cy="200" r="100" stroke="red" stroke-width="1" fill="")
-    svg
-        circle(id="cardinal" cx="200" cy="200" r="200" stroke="green" stroke-width="1" fill="")
+    svg(class="c" width="400px" height="400px")
+        circle(id="gifts" cx="200" cy="200" r="200" stroke="black" stroke-width="1" fill="#DB9796")
+    svg(class="c" width="300px" height="300px")
+      circle(id="cardinal" cx="150" cy="150" r="150" stroke="black" stroke-width="1" fill="#963735")
+    svg(class="c" width="200px" height="200px")
+      circle(id="grace" cx="100" cy="100" r="100" stroke="black" stroke-width="1" fill="#632625")
 
     //- infused virtue
     svg(id="faith" class='virtue grace')
@@ -29,34 +31,67 @@ block content
     svg(id="fortitude" class='virtue cardinal')
         text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Fortitude
 
+    //- gifts from the Holy Spirit
+        Wisdom
+        Courage
+        Knowledge
+        Piety
+        Fear
+        Understanding
+        Counsel
+    svg(id="wisdom" class='virtue gifts')
+        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Wisdom
+    svg(id="courage" class='virtue gifts')
+        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Courage
+    svg(id="knowledge" class='virtue gifts')
+        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Knowledge
+    svg(id="piety" class='virtue gifts')
+        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Piety
+    svg(id="fear" class='virtue gifts')
+        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Fear
+    svg(id="understanding" class='virtue gifts')
+        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Understanding
+    svg(id="counsel" class='virtue gifts')
+        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Counsel
+
+
     script.
         let canvas = $("#canvas");
         canvas.center();
+        $('.c').center();
 
         function a(_path) {
-            const R = 300, dur = 15;
-            let svgPathElements = MotionPathPlugin.convertToPath('#' + _path);
-            let elements = $('.' + _path);
+            const duration = 10;
+            const svgPathElements = MotionPathPlugin.convertToPath('#' + _path);
+            const elements = $('.' + _path);
             $(elements).each(function (index) {
-                let startAt = index / elements.length;
-                let endAt = 1 + startAt;
-                console.log({e: this, start: startAt, end: endAt});
-                gsap.to($(this), {
-                    duration: dur,
-                    immediateRender: true,
-                    ease: Power0.easeNone,
-                    repeat: -1,
+                let position = index / elements.length;
+                let timeline = gsap.timeline();
+                timeline.to($(this), {
+                        duration: duration * (1 - position),
+                        immediateRender: true,
+                        ease: Power0.easeNone,
                         motionPath: {
                             align: canvas,
                             path: svgPathElements[0],
-                            autoRotate: true,
-                            start: startAt,
-                            end: endAt
+                            autoRotate: false,
+                            start: position
                         }
                     }
-                )
+                ).to($(this), {
+                    duration: position * duration,
+                    immediateRender: true,
+                    ease: Power0.easeNone,
+                    motionPath: {
+                        align: canvas,
+                        path: svgPathElements[0],
+                        autoRotate: false,
+                        end: position
+                    }
+                }).repeat(-1);
             })
         }
-        a('cardinal');
-       // a('grace');
+        // a('grace');
+        // a('cardinal');
+        // a('gifts');
 
