@@ -1,5 +1,5 @@
+//- https://pugjs.org/api/express.html
 doctype html
-include version
 html
     head
         title= title
@@ -7,8 +7,15 @@ html
         script(type='text/javascript' src='/javascripts/jquery/jquery.min.js')
         link(rel='javascript', href='/javascripts/bootstrap/bootstrap.js')
         script(type='text/javascript' src='/javascripts/gsap/gsap.min.js')
+        if query_path
+          script(type='text/javascript' src='/javascripts/gsap/MotionPathPlugin.js')
+        script(type='text/javascript' src='/javascripts/' + query_path + '/script.js')
         link(rel='stylesheet', href='/stylesheets/bootstrap/bootstrap.css')
         link(rel='stylesheet', href='/stylesheets/style.css')
+        if query_path
+          link(rel='stylesheet', href='/stylesheets' + query_path + '/style.css')
+        script(type='text/javascript').
+            gsap.registerPlugin(MotionPathPlugin);
     body
         nav.navbar.navbar-expand-lg.navbar-light.bg-light
             a.navbar-brand(href='/')
@@ -20,4 +27,4 @@ html
                     a.nav-item.nav-link(href='/viering/') #{ msg.EUCHARIST_TITLE }
                     a.nav-item.nav-link(href='/onze_vader/') #{ msg.OUR_FATHER_TITLE }
         block content
-        script(type='text/javascript' src='/javascripts/kute.js/kute.min.js')
+include version

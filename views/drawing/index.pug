@@ -1,0 +1,62 @@
+extends ../layout
+
+block content
+    h1= title
+    p #{title}
+
+    div(id='canvas' class='canvas')
+
+    svg
+        circle(id="grace" cx="200" cy="200" r="100" stroke="red" stroke-width="1" fill="")
+    svg
+        circle(id="cardinal" cx="200" cy="200" r="200" stroke="green" stroke-width="1" fill="")
+
+    //- infused virtue
+    svg(id="faith" class='virtue grace')
+        text(x="50%" y="50%"  text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Faith
+    svg(id="hope" class='virtue grace')
+        text(x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Hope
+    svg(id="love" class='virtue grace')
+        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Love
+
+    //- Cardinal virtues
+    svg(id="prudence" class='virtue cardinal')
+        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Prudence
+    svg(id="justice" class='virtue cardinal')
+        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Justice
+    svg(id="temperance" class='virtue cardinal')
+        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Temperance
+    svg(id="fortitude" class='virtue cardinal')
+        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Fortitude
+
+    script.
+        let canvas = $("#canvas");
+        canvas.center();
+
+        function a(_path) {
+            const R = 300, dur = 15;
+            let svgPathElements = MotionPathPlugin.convertToPath('#' + _path);
+            let elements = $('.' + _path);
+            $(elements).each(function (index) {
+                let startAt = index / elements.length;
+                let endAt = 1 + startAt;
+                console.log({e: this, start: startAt, end: endAt});
+                gsap.to($(this), {
+                    duration: dur,
+                    immediateRender: true,
+                    ease: Power0.easeNone,
+                    repeat: -1,
+                        motionPath: {
+                            align: canvas,
+                            path: svgPathElements[0],
+                            autoRotate: true,
+                            start: startAt,
+                            end: endAt
+                        }
+                    }
+                )
+            })
+        }
+        a('cardinal');
+       // a('grace');
+

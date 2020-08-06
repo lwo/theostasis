@@ -1,0 +1,19 @@
+body {
+    overflow: hidden;
+    background-color: #111;
+    color: silver;
+}
+
+div.canvas {
+    width: 1px;
+    height: 1px;
+    color: black;
+    background: white;
+    border-radius: 1px;
+    text-align: center;
+}
+
+.virtue {
+    width: 50px;
+    height: 50px
+}

@@ -70,7 +70,7 @@ app.use('/', staticRouter);
                                 console.info('Adding to static router ' + query_path);
                                 staticRouter.get(query_path, function (req, res) {
                                     let paths = query_path.substring(1);
-                                    res.render(path.join(paths, 'index'));
+                                    res.render(path.join(paths, 'index'), {query_path:query_path} );
                                 });
                             }
                         }
