@@ -4,14 +4,11 @@ block content
     h1= title
     p #{title}
 
-    div(id='canvas' class='canvas')
-
-    svg(class="c" width="400px" height="400px")
-        circle(id="gifts" cx="200" cy="200" r="200" stroke="black" stroke-width="1" fill="#DB9796")
-    svg(class="c" width="300px" height="300px")
-      circle(id="cardinal" cx="150" cy="150" r="150" stroke="black" stroke-width="1" fill="#963735")
-    svg(class="c" width="200px" height="200px")
-      circle(id="grace" cx="100" cy="100" r="100" stroke="black" stroke-width="1" fill="#632625")
+    svg(id="c" width="500px" height="500px")
+        circle(id="fruits" cx="250" cy="250" r="250" stroke="black" stroke-width="1" fill="#F1DCDB")
+        circle(id="gifts" cx="250" cy="250" r="200" stroke="black" stroke-width="1" fill="#DB9796")
+        circle(id="cardinal" cx="250" cy="250" r="150" stroke="black" stroke-width="1" fill="#963735")
+        circle(id="grace" cx="250" cy="250" r="100" stroke="black" stroke-width="1" fill="#632625")
 
     //- infused virtue
     svg(id="faith" class='virtue grace')
@@ -56,14 +53,14 @@ block content
 
 
     script.
-        let canvas = $("#canvas");
-        canvas.center();
-        $('.c').center();
+        $('#c').center();
 
-        function a(_path) {
+        function a(id) {
             const duration = 10;
-            const svgPathElements = MotionPathPlugin.convertToPath('#' + _path);
-            const elements = $('.' + _path);
+            let canvas = $('#' + id);
+            let path = MotionPathPlugin.convertToPath(canvas)[0];
+            let elements = $('.' + id);
+            console.log(path);
             $(elements).each(function (index) {
                 let position = index / elements.length;
                 let timeline = gsap.timeline();
@@ -72,8 +69,8 @@ block content
                         immediateRender: true,
                         ease: Power0.easeNone,
                         motionPath: {
-                            align: canvas,
-                            path: svgPathElements[0],
+                            //align: canvas,
+                            path: path,
                             autoRotate: false,
                             start: position
                         }
@@ -83,15 +80,15 @@ block content
                     immediateRender: true,
                     ease: Power0.easeNone,
                     motionPath: {
-                        align: canvas,
-                        path: svgPathElements[0],
+                        //align: canvas,
+                        path: path,
                         autoRotate: false,
                         end: position
                     }
                 }).repeat(-1);
             })
         }
-        // a('grace');
-        // a('cardinal');
+        a('grace');
+        a('cardinal');
         // a('gifts');
 
