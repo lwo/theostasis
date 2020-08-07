@@ -1,12 +1,10 @@
-$(function() {
+$(function () {
 
     const canvas = $('#canvas');
     canvas.center();
 
-    function a(id) {
-        const duration = 10;
+    function a(id, direction, duration) {
         let shape = $('#' + id + '-path');
-        shape.invisible();
         let path = MotionPathPlugin.convertToPath(shape);
         let elements = $('.' + id);
         $(elements).each(function (index) {
@@ -17,31 +15,33 @@ $(function() {
                     duration: duration * (1 - position),
                     immediateRender: true,
                     ease: Power0.easeNone,
-                    motionPath: {alignOrigin:0,
+                    motionPath: {
                         align: path,
                         path: path[0],
-                        autoRotate: false,
-                        start: position
+                        autoRotate: true,
+                        start: position,
+                        alignOrigin: [0.5, 0.5]
                     }
                 }
             ).to(this, {
                 duration: position * duration,
                 immediateRender: true,
                 ease: Power0.easeNone,
-                motionPath: {alignOrigin:0,
+                motionPath: {
                     align: path,
                     path: path[0],
-                    autoRotate: false,
-                    end: position
+                    autoRotate: true,
+                    end: position,
+                    alignOrigin: [0.5, 0.5]
                 }
             }).repeat(-1);
-
         })
     }
 
-    a('infused');
-    //a('cardinal');
-
-// a('gifts');
+    a('infused', 1, 10);
+    a('cardinal', 1, 20);
+    a('gift', 1, 30);
+    a('fruit', 1, 40);
+    a('vice', -1, 50);
 
 })

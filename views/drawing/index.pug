@@ -6,50 +6,90 @@ block content
 
     svg(id="canvas" width="600px" height="600px")
         circle(id="vice" cx="300" cy="300" r="300" stroke="black" stroke-width="1" fill="#ffffff")
-        circle(id="fruits" cx="300" cy="300" r="250" stroke="black" stroke-width="1" fill="#F1DCDB")
-        circle(id="gifts" cx="300" cy="300"  r="200" stroke="black" stroke-width="1" fill="#E6B8BA")
+        circle(id="vice-path" cx="300" cy="300" r="275" fill-opacity="0")
+        circle(id="fruit" cx="300" cy="300" r="250" stroke="black" stroke-width="1" fill="#F1DCDB")
+        circle(id="fruit-path" cx="300" cy="300" r="225" fill-opacity="0")
+        circle(id="gift" cx="300" cy="300"  r="200" stroke="black" stroke-width="1" fill="#E6B8BA")
+        circle(id="gift-path" cx="300" cy="300"  r="175" fill-opacity="0")
         circle(id="cardinal" cx="300" cy="300"  r="150" stroke="black" stroke-width="1" fill="#DB9796")
+        circle(id="cardinal-path" cx="300" cy="300"  r="125" fill-opacity="0")
         circle(id="infused" cx="300" cy="300"  r="100" stroke="black" stroke-width="1" fill="#963735")
-        circle(id="infused-path" cx="300" cy="300"  r="90")
+        circle(id="infused-path" cx="300" cy="300"  r="75" fill-opacity="0")
         circle(id="grace" cx="300" cy="300"  r="50" stroke="black" stroke-width="1" fill="#632625")
+        image(x="250" y="245" width="100" height="100" xlink:href="/images/triquetra.svg")
 
-    //- infused virtue
-    svg(id="faith" class='virtue infused')
-        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px") Faith
-    svg(id="hope" class='virtue infused')
-        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Hope
-    svg(id="love" class='virtue infused')
-        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Love
 
-    //- Cardinal virtues
-    svg(id="prudence" class='virtue cardinal')
-        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Prudence
-    svg(id="justice" class='virtue cardinal')
-        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Justice
-    svg(id="temperance" class='virtue cardinal')
-        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Temperance
-    svg(id="fortitude" class='virtue cardinal')
-        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Fortitude
+        g(id="faith" class="infused")
+            text( font-size="14" fill="white") Faith
+        g(id="hope" class="infused")
+            text(font-size="14" fill="white") Hope
+        g(id="love" class="infused")
+            text(font-size="14" fill="white") Love
 
-    //- gifts from the Holy Spirit
-        Wisdom
-        Courage
-        Knowledge
-        Piety
-        Fear
-        Understanding
-        Counsel
-    svg(id="wisdom" class='virtue gifts')
-        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Wisdom
-    svg(id="courage" class='virtue gifts')
-        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Courage
-    svg(id="knowledge" class='virtue gifts')
-        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Knowledge
-    svg(id="piety" class='virtue gifts')
-        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Piety
-    svg(id="fear" class='virtue gifts')
-        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Fear
-    svg(id="understanding" class='virtue gifts')
-        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Understanding
-    svg(id="counsel" class='virtue gifts')
-        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Counsel
+        g(id="prudence" class="cardinal")
+                text(font-size="14") Prudence
+        g(id="justice" class="cardinal")
+                text(font-size="14") Justice
+        g(id="temperance" class="cardinal")
+                text(font-size="14") Temperance
+        g(id="fortitude" class="cardinal")
+                text(font-size="14") Fortitude
+
+        g(id="holyghost" class="gift")
+            image(x="250" y="245" width="50" height="50" xlink:href="/images/holyghost.svg")
+        g(id="wisdom" class="gift")
+                text(font-size="14") Wisdom
+        g(id="courage" class="gift")
+                text(font-size="14") Courage
+        g(id="knowledge" class="gift")
+                text(font-size="14") Knowledge
+        g(id="piety" class="gift")
+                text(font-size="14") Piety
+        g(id="fear" class="gift")
+                text(font-size="14") Fear
+        g(id="understanding" class="gift")
+                text(font-size="14") Understanding
+        g(id="counsel" class="gift")
+                text(font-size="14") Counsel
+
+        g(id="chastity" class="fruit")
+                text(font-size="14") Chastity
+        g(id="joy" class="fruit")
+                text(font-size="14") Joy
+        g(id="patience" class="fruit")
+                text(font-size="14") Patience
+        g(id="kindness" class="fruit")
+                text(font-size="14") Kindness
+        g(id="goodness" class="fruit")
+                text(font-size="14") Goodness
+        g(id="faithfulness" class="fruit")
+                text(font-size="14") Faithfulness
+        g(id="fruit" class="fruit")
+            image(x="250" y="245" width="50" height="50" xlink:href="/images/fruits.svg")
+        g(id="generosity" class="fruit")
+                text(font-size="14") Generosity
+        g(id="gentleness" class="fruit")
+                text(font-size="14") Gentleness
+        g(id="control" class="fruit")
+                text(font-size="14") Control
+        g(id="charity" class="fruit")
+                text(font-size="14") Charity
+        g(id="modesty" class="fruit")
+                text(font-size="14") Modesty
+
+        g(id="lust" class="vice")
+                text(font-size="14") Lust
+        g(id="gluttony" class="vice")
+                text(font-size="14") Gluttony
+        g(id="sloth" class="vice")
+                text(font-size="14") Sloth
+        g(id="envy" class="vice")
+                text(font-size="14") Envy
+        g(id="wrath" class="vice")
+                text(font-size="14") Wrath
+        g(id="avarice" class="vice")
+                text(font-size="14") Avarice
+        g(id="pride" class="vice")
+                text(font-size="14") Pride
+        g(id="snake" class="vice")
+            image(x="250" y="245" width="50" height="50" xlink:href="/images/snake.svg")
