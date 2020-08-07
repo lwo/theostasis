@@ -7,15 +7,20 @@ html
         script(type='text/javascript' src='/javascripts/jquery/jquery.min.js')
         link(rel='javascript', href='/javascripts/bootstrap/bootstrap.js')
         script(type='text/javascript' src='/javascripts/gsap/gsap.min.js')
+        script(type='text/javascript' src='/javascripts/script.js')
+        script(type='text/javascript' src='/javascripts/gsap/MotionPathPlugin.js')
+        script(type='text/javascript' src='/javascripts/gsap/MotionPathHelper.js')
+        script(type='text/javascript' src='/javascripts/gsap/DrawSVGPlugin.js')
+        script(type='text/javascript' src='/javascripts/gsap/MorphSVGPlugin.js')
+        script.
+            gsap.registerPlugin(MotionPathPlugin, DrawSVGPlugin, MorphSVGPlugin);
+
         if query_path
-          script(type='text/javascript' src='/javascripts/gsap/MotionPathPlugin.js')
-        script(type='text/javascript' src='/javascripts/' + query_path + '/script.js')
+          script(type='text/javascript' src='/javascripts/' + query_path + '/script.js')
         link(rel='stylesheet', href='/stylesheets/bootstrap/bootstrap.css')
         link(rel='stylesheet', href='/stylesheets/style.css')
         if query_path
           link(rel='stylesheet', href='/stylesheets' + query_path + '/style.css')
-        script(type='text/javascript').
-            gsap.registerPlugin(MotionPathPlugin);
     body
         nav.navbar.navbar-expand-lg.navbar-light.bg-light
             a.navbar-brand(href='/')

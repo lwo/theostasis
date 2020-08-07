@@ -4,29 +4,32 @@ block content
     h1= title
     p #{title}
 
-    svg(id="c" width="500px" height="500px")
-        circle(id="fruits" cx="250" cy="250" r="250" stroke="black" stroke-width="1" fill="#F1DCDB")
-        circle(id="gifts" cx="250" cy="250" r="200" stroke="black" stroke-width="1" fill="#DB9796")
-        circle(id="cardinal" cx="250" cy="250" r="150" stroke="black" stroke-width="1" fill="#963735")
-        circle(id="grace" cx="250" cy="250" r="100" stroke="black" stroke-width="1" fill="#632625")
+    svg(id="canvas" width="600px" height="600px")
+        circle(id="vice" cx="300" cy="300" r="300" stroke="black" stroke-width="1" fill="#ffffff")
+        circle(id="fruits" cx="300" cy="300" r="250" stroke="black" stroke-width="1" fill="#F1DCDB")
+        circle(id="gifts" cx="300" cy="300"  r="200" stroke="black" stroke-width="1" fill="#E6B8BA")
+        circle(id="cardinal" cx="300" cy="300"  r="150" stroke="black" stroke-width="1" fill="#DB9796")
+        circle(id="infused" cx="300" cy="300"  r="100" stroke="black" stroke-width="1" fill="#963735")
+        circle(id="infused-path" cx="300" cy="300"  r="90")
+        circle(id="grace" cx="300" cy="300"  r="50" stroke="black" stroke-width="1" fill="#632625")
 
     //- infused virtue
-    svg(id="faith" class='virtue grace')
-        text(x="50%" y="50%"  text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Faith
-    svg(id="hope" class='virtue grace')
-        text(x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Hope
-    svg(id="love" class='virtue grace')
-        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Love
+    svg(id="faith" class='virtue infused')
+        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px") Faith
+    svg(id="hope" class='virtue infused')
+        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Hope
+    svg(id="love" class='virtue infused')
+        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Love
 
     //- Cardinal virtues
     svg(id="prudence" class='virtue cardinal')
-        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Prudence
+        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Prudence
     svg(id="justice" class='virtue cardinal')
-        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Justice
+        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Justice
     svg(id="temperance" class='virtue cardinal')
-        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Temperance
+        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Temperance
     svg(id="fortitude" class='virtue cardinal')
-        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Fortitude
+        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Fortitude
 
     //- gifts from the Holy Spirit
         Wisdom
@@ -37,58 +40,16 @@ block content
         Understanding
         Counsel
     svg(id="wisdom" class='virtue gifts')
-        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Wisdom
+        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Wisdom
     svg(id="courage" class='virtue gifts')
-        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Courage
+        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Courage
     svg(id="knowledge" class='virtue gifts')
-        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Knowledge
+        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Knowledge
     svg(id="piety" class='virtue gifts')
-        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Piety
+        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Piety
     svg(id="fear" class='virtue gifts')
-        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Fear
+        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Fear
     svg(id="understanding" class='virtue gifts')
-        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Understanding
+        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Understanding
     svg(id="counsel" class='virtue gifts')
-        text( x="50%" y="50%" text-anchor="middle" stroke="white" stroke-width="1px" dy=".3em") Counsel
-
-
-    script.
-        $('#c').center();
-
-        function a(id) {
-            const duration = 10;
-            let canvas = $('#' + id);
-            let path = MotionPathPlugin.convertToPath(canvas)[0];
-            let elements = $('.' + id);
-            console.log(path);
-            $(elements).each(function (index) {
-                let position = index / elements.length;
-                let timeline = gsap.timeline();
-                timeline.to($(this), {
-                        duration: duration * (1 - position),
-                        immediateRender: true,
-                        ease: Power0.easeNone,
-                        motionPath: {
-                            //align: canvas,
-                            path: path,
-                            autoRotate: false,
-                            start: position
-                        }
-                    }
-                ).to($(this), {
-                    duration: position * duration,
-                    immediateRender: true,
-                    ease: Power0.easeNone,
-                    motionPath: {
-                        //align: canvas,
-                        path: path,
-                        autoRotate: false,
-                        end: position
-                    }
-                }).repeat(-1);
-            })
-        }
-        a('grace');
-        a('cardinal');
-        // a('gifts');
-
+        text(x="0" y="15%" text-anchor="start" stroke="white" stroke-width="1px")  Counsel
