@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+    h1= title
+    p #{title}
+
+    svg(id="canvas" width="1200px" height="1200px" fill="#ffbbaa")
+        circle(id="true" cx="600" cy="100" r="150" stroke="#000000" stroke-width="1" fill="#ffffff")
+        circle(id="good" cx="350" cy="450" r="150" stroke="#000000" stroke-width="1" fill="#ffffff")
+        circle(id="beautiful" cx="850" cy="450" r="150" stroke="#000000" stroke-width="1" fill="#ffffff")

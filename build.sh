@@ -6,7 +6,7 @@ if [ -z "$tag" ]; then
   exit 1
 fi
 rev=$(git rev-parse "$tag")
-echo '//' > views/version.pug
+echo '//-' > views/version.pug
 echo "  https://github.com/lwo/theostasis/releases/tag/${tag}" >> views/version.pug
 echo "  https://github.com/lwo/theostasis/commit/${rev}" >> views/version.pug
 sed "s/Version='latest'/Version='${tag}'/g" Dockerfile > Dockerfile.tmp

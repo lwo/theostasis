@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  proxy:
+    image: jwilder/nginx-proxy
+    restart: always
+    depends_on:
+      - web
+    ports:
+      - '80:80'
+#      - '443:443'
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+#      - /home/lvwouw/certs:/etc/nginx/certs:ro
+    networks:
+      vpcbr:
+
+  web:
+    image: theosis:latest
+    restart: always
+    user: node
+    ports:
+      - '3000:3000'
+    environment:
+      - VIRTUAL_HOST=www.lucien-van-wouw.nl
+      - VIRTUAL_PORT=3000
+    networks:
+      vpcbr:
+
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 172.21.0.1/24

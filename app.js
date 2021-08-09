@@ -4,7 +4,7 @@ let express = require('express');
 let fs = require('fs');
 let i18n = require('i18n-express');
 let logger = require('morgan');
-let nconf = require('nconf');
+// let nconf = require('nconf');
 let path = require('path');
 let app = express();
 
