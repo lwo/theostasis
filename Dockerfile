@@ -1,4 +1,5 @@
-FROM node:alpine3.13
+FROM node:alpine3.15
+
 LABEL Description='Theosis' Version='latest'
 
 WORKDIR /home/node

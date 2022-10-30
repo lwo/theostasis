@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+        id="canvas"
+        width="1122.5197"
+        height="1587.4016"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg">
+
+    <defs>
+        <style type="text/css"><![CDATA[
+            circle.gezicht {
+            fill:#ffffff;
+            stroke:#000000;
+            stroke-width:1;
+            stroke-miterlimit:4;
+            stroke-dasharray:none
+            }
+            rect.op {
+            fill:#ffffff;
+            stroke:#000000;
+            stroke-width:1;
+            stroke-miterlimit:4;
+            stroke-dasharray:none;
+            }
+            rect.onder {
+            opacity: 0;
+            fill:#000000;
+            stroke:#000000;
+            stroke-width:1;
+            stroke-miterlimit:4;
+            stroke-dasharray:none;
+            }
+        ]]></style>
+    </defs>
+
+    <g id="canvas">
+        <circle
+                class="gezicht"
+                id="gezicht"
+                cx="400"
+                cy="400"
+                r="400"/>
+        <g id="advent">
+            <g class="advent"
+                    id="advent_1e_zondag">
+                <rect
+                        class="op"
+                        width="390"
+                        height="40"
+                        x="10"
+                        y="380"/>
+                <text
+                        font-size="44px"
+                        fill="#0000ff"
+                        x="33.783836"
+                        y="407.41388"
+                        style="font-size:26.6667px;fill:#000000">1e zondag
+                </text>
+                <rect
+                        class="onder"
+                        width="390"
+                        height="40"
+                        x="400"
+                        y="380"/>
+            </g>
+            <g class="advent"
+                    id="advent_2e_zondag">
+                <rect
+                        class="op"
+                        width="390"
+                        height="40"
+                        x="10"
+                        y="380"/>
+                <text
+                        font-size="44px"
+                        fill="#0000ff"
+                        x="33.783836"
+                        y="407.41388"
+                        style="font-size:26.6667px;fill:#000000">2e zondag
+                </text>
+                <rect
+                        class="onder"
+                        width="390"
+                        height="40"
+                        x="400"
+                        y="380"/>
+            </g>
+            <g class="advent"
+                    id="advent_3e_zondag">
+                <rect
+                        class="op"
+                        width="390"
+                        height="40"
+                        x="10"
+                        y="380"/>
+                <text
+                        font-size="44px"
+                        fill="#0000ff"
+                        x="33.783836"
+                        y="407.41388"
+                        style="font-size:26.6667px;fill:#000000">3e zondag
+                </text>
+                <rect
+                        class="onder"
+                        width="390"
+                        height="40"
+                        x="400"
+                        y="380"/>
+            </g>
+            <g class="advent"
+                    id="advent_4e_zondag">
+                <rect
+                        class="op"
+                        width="390"
+                        height="40"
+                        x="10"
+                        y="380"/>
+                <text
+                        font-size="44px"
+                        fill="#0000ff"
+                        x="33.783836"
+                        y="407.41388"
+                        style="font-size:26.6667px;fill:#000000">4e zondag
+                </text>
+                <rect
+                        class="onder"
+                        width="390"
+                        height="40"
+                        x="400"
+                        y="380"/>
+            </g>
+        </g>
+    </g>
+</svg>
