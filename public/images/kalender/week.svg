@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg
+        version="1.1"
+        id="svg1014"
+        width="40.32629"
+        height="752.81512"
+        xmlns="http://www.w3.org/2000/svg">
+    <g id="g1020"
+       transform="matrix(3.7795276,0,0,3.7795276,-376.84174,-185.51728)">
+        <g id="g24368"
+           transform="matrix(-0.01351724,-0.26423326,0.26590045,-0.01343534,39.265883,243.7739)"
+           style="display:inline">
+            <path id="circle23894"
+                  style="fill:#008000;stroke:#000000"
+                  transform="rotate(-16.112785)"
+                  d="m 620.5324,454.62488 a 376,376 0 0 1 -12.54293,36.56118 L 259.07828,351.05405 Z"/>
+            <path id="path24284"
+                  style="opacity:0;fill:#008000;stroke:#000000"
+                  transform="rotate(163.88721)"
+                  d="m 101.97121,-246.80066 a 376,376 0 0 1 -12.54293,36.56118 l -348.91119,-140.13201 z"/>
+        </g>
+    </g>
+</svg>

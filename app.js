@@ -2,7 +2,6 @@ let cookieParser = require('cookie-parser');
 let createError = require('http-errors');
 let express = require('express');
 let fs = require('fs');
-let i18n = require('i18n-express');
 let logger = require('morgan');
 // let nconf = require('nconf');
 let path = require('path');
@@ -17,13 +16,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use(i18n({
-    textsVarName: 'msg',
-    translationsPath: path.join(__dirname, 'i18n'),
-    siteLangs: ['en', 'nl'],
-    defaultLang: 'en'
-}));
 
 // routers
 //

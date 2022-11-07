@@ -4,4 +4,4 @@ node_modules/
 *.ipr
 version.pug
 art/
-work/
+*.tgz

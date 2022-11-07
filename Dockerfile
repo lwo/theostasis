@@ -1,4 +1,4 @@
-FROM node:alpine3.15
+FROM node:alpine3.16
 
 LABEL Description='Theosis' Version='latest'
 

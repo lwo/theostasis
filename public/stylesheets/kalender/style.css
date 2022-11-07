@@ -1,0 +1,21 @@
+circle.gezicht {
+    fill:#ffffff;
+    stroke:#000000;
+    stroke-width:1;
+    stroke-miterlimit:4;
+    stroke-dasharray:none
+}
+polygon.op {
+    fill:#ffffaa;
+    stroke:#000000;
+    stroke-width:1;
+    stroke-miterlimit:4;
+    stroke-dasharray:none;
+}
+
+/*#canvas1 {*/
+/*    border:1px solid black;*/
+/*}*/
+/*#canvas2 {*/
+/*    border:1px solid red;*/
+/*}*/
