@@ -11,18 +11,18 @@ block content
         $(function () {
             let a = $('.advent1');
             let aantal = a.length;
-            // $(a).each(function (i, o) { // i is index en o is object
-            //     let number = i / aantal;
-            //     let rotation = 360 * number;
-            //     let tl = gsap.timeline(); // create the timeline
-            //     tl.to(o, {
-            //         transformOrigin: "right 20",
-            //         rotation: rotation,
-            //         duration: 0,
-            //         ease: 'none',
-            //         repeat: 0
-            //     });
-            // });
+            $(a).each(function (i, o) { // i is index en o is object
+                let number = i / aantal;
+                let rotation = 360 * number;
+                let tl = gsap.timeline(); // create the timeline
+                tl.to(o, {
+                    transformOrigin: "right 20",
+                    rotation: rotation,
+                    duration: 0,
+                    ease: 'none',
+                    repeat: 0
+                });
+            });
 
             $('.advent2').each(function (i, o) { // i is index en o is object
                 let number = i / aantal;

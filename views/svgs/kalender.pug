@@ -1,8 +1,8 @@
 mixin svg-kalender()
 
-  svg(id="canvas1" width="400" height="800")
+  svg(id="canvas1" viewBox="0 0 400 800" width="400" height="800") // gebruik viewbox met offset -400 en de tweede svg 400
 
-    g(id="gezicht1")
+    g(id="gezicht1" visibility="hidden")
       circle(id="gezicht1" cx="400" cy="400" r="400" )
 
       g(class="dag advent1")
@@ -269,7 +269,7 @@ mixin svg-kalender()
         polygon(class="op" points="400 400,0 420,0 380")
         text(x="15" y="407" style="font-size:20px;") Christus Koning v.h. heelal
 
-  svg(id="canvas2" width="400" height="800")
+  svg(id="canvas2" viewBox="0 0 400 800" width="400" height="800")
     g(id="gezicht2")
       circle(cx="0" cy="400" r="400" )
       g(class="advent2")
@@ -536,3 +536,4 @@ mixin svg-kalender()
         polygon(class="op" points="0 400,400 380,400 420")
         text(x="300" y="407" style="font-size:20px;") Christus Koning v.h. heelal
 
+    circle(cx="0" cy="400" r="380" fill="")
