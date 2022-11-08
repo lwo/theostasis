@@ -9,9 +9,10 @@ block content
 
     script.
         $(function () {
-            let a = $('.advent1');
-            let aantal = a.length;
-            $(a).each(function (i, o) { // i is index en o is object
+
+            const aantal = 66;
+
+            $('.advent1').each(function (i, o) { // i is index en o is object
                 let number = i / aantal;
                 let rotation = 360 * number;
                 let tl = gsap.timeline(); // create the timeline
@@ -37,22 +38,22 @@ block content
                 });
             });
 
-            // $('#gezicht1').each(function (i, o) { // i is index en o is object
-            //     gsap.to(o, {
-            //         transformOrigin: "400 400",
-            //         rotation: 360,
-            //         duration: 60,
-            //         ease: 'none',
-            //         repeat: -1
-            //     });
-            // });
-            // $('#gezicht2').each(function (i, o) { // i is index en o is object
-            //     gsap.to(o, {
-            //         transformOrigin: "535 535",
-            //         rotation: 360,
-            //         duration: 60,
-            //         ease: 'none',
-            //         repeat: -1
-            //     });
-            // });
+            $('#gezicht_links').each(function (i, o) { // i is index en o is object
+                gsap.to(o, {
+                    transformOrigin: "400 400",
+                    rotation: 360,
+                    duration: 60,
+                    ease: 'none',
+                    repeat: -1
+                });
+            });
+            $('#gezicht_rechts').each(function (i, o) { // i is index en o is object
+                gsap.to(o, {
+                    transformOrigin: "400 400",
+                    rotation: 360,
+                    duration: 60,
+                    ease: 'none',
+                    repeat: -1
+                });
+            });
         });
