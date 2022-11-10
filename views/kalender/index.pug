@@ -1,5 +1,5 @@
 extends ../layout
-include ../svgs/kalender
+include kalender
 
 block content
     h1= title
@@ -37,12 +37,12 @@ block content
                     repeat: 0
                 });
             });
-
+            //
             $('#gezicht_links').each(function (i, o) { // i is index en o is object
                 gsap.to(o, {
                     transformOrigin: "400 400",
                     rotation: 360,
-                    duration: 60,
+                    duration: 120,
                     ease: 'none',
                     repeat: -1
                 });
@@ -51,7 +51,7 @@ block content
                 gsap.to(o, {
                     transformOrigin: "400 400",
                     rotation: 360,
-                    duration: 60,
+                    duration: 120,
                     ease: 'none',
                     repeat: -1
                 });
