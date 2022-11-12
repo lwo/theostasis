@@ -37,23 +37,25 @@ block content
                     repeat: 0
                 });
             });
-            //
+
             $('#gezicht_links').each(function (i, o) { // i is index en o is object
                 gsap.to(o, {
-                    transformOrigin: "400 400",
+                    transformOrigin: "center center",
                     rotation: 360,
-                    duration: 120,
+                    duration: 12,
                     ease: 'none',
                     repeat: -1
                 });
             });
+
             $('#gezicht_rechts').each(function (i, o) { // i is index en o is object
                 gsap.to(o, {
-                    transformOrigin: "400 400",
+                    transformOrigin: "center center",
                     rotation: 360,
-                    duration: 120,
+                    duration: 12,
                     ease: 'none',
                     repeat: -1
                 });
             });
+
         });
