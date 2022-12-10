@@ -19,19 +19,19 @@ mixin svg-kalender()
                 g(class='advent')
 
                     g(class="dag advent1")
-                        path(class="op" d="M 475,475 l -400,20 a 400 400 0 0 0 0 -40 Z" id="p")
+                        path d="M 475,475 l -400,20 a 475 475 0 0 0 0 -40 Z"/>
                         text(x="90" y="482" style="font-size:20px" id="t") 1e zondag
 
                     g(class="dag advent1")
                         use(xlink:href="#p")
-                        text(x="90" y="482" text-anchor="begin" style="font-size:20px;") 2e zondag
+                        use(xlink:href="#t") 2e zondag
 
                     g(class="dag advent1")
                         use(xlink:href="#p")
                         text(x="90" y="482" text-anchor="begin" style="font-size:20px;") 3e zondag
 
                     g(class="dag advent1")
-                        use(xlink:href="#p")
+                        polygon(class="op" points="475 475,75 495,75 455" id="dag4")
                         text(x="90" y="482" text-anchor="begin" style="font-size:20px;") 4e zondag
 
                     g(class="dag advent1")
@@ -290,267 +290,267 @@ mixin svg-kalender()
             g(id="gezicht_rechts")
 
                 g(class="advent2")
-                    path(class="op" d="M 475,475 l 400,-20 a 400 400 0 0 0 0 40 Z" id="pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 1e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 2e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 3e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 4e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Kerstmis nachtmis
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Kerstmis dagmis
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") H. Stefanus
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Maria, Moeder van God
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Openbaring des Heren
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 2e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 3e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 4e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 5e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 6e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 7e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Aswoensdag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 1e zondag veertigdagentijd
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 2e zondag veertigdagentijd
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 3e zondag veertigdagentijd
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 4e zondag veertigdagentijd
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 5e zondag veertigdagentijd
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Palmzondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Witte donderdag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Goede Vrijdag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Paaswake
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Paaszondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Tweede Paasdag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Beloken Pasen
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 3e zondag van Pasen
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 4e zondag van Pasen
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 5e zondag van Pasen
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Hemelvaart van de Heer
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 7e zondag van Pasen
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Vigilie van Pinksteren
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Pinksteren
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") H. Maria, Moeder van de Kerk
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Feest van de H. Drie-eenheid
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Feest van het H. Sacrament
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 10e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 11e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 12e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 13e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 14e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 15e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 16e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 17e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Gedaanteverandering v.d. Heer
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 19e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Maria Tenhemelopneming
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 20e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 21e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 22e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 23e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 24e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 25e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 26e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 27e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 28e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 29e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 30e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Allerheiligen
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Allerzielen
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 31e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 32e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") 33e zondag
 
                 g(class="advent2")
-                    use(xlink:href="#pp")
+                    polygon(class="op" points="475 475,875 455,875 495")
                     text(x="860" y="482" text-anchor="end" style="font-size:20px;") Christus Koning v.h. heelal
 
                 //circle(cx="475" cy="475"  r="20" stroke="black" stroke-width="1" fill="yellow")

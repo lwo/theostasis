@@ -11,6 +11,7 @@ block content
         $(function () {
 
             const aantal = 66;
+            const duration = 24 * 60 ;
 
             $('.advent1').each(function (i, o) { // i is index en o is object
                 let number = i / aantal;
@@ -42,7 +43,7 @@ block content
                 gsap.to(o, {
                     transformOrigin: "center center",
                     rotation: 360,
-                    duration: 12,
+                    duration: duration,
                     ease: 'none',
                     repeat: -1
                 });
@@ -52,7 +53,7 @@ block content
                 gsap.to(o, {
                     transformOrigin: "center center",
                     rotation: 360,
-                    duration: 12,
+                    duration: duration,
                     ease: 'none',
                     repeat: -1
                 });

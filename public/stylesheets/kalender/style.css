@@ -5,7 +5,7 @@ circle.gezicht {
     stroke-miterlimit:4;
     stroke-dasharray:none
 }
-polygon.op {
+path.op {
     fill:#ffffaa;
     stroke:#000000;
     stroke-width:1;
